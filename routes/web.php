@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/shop', function () {
+    return view('shop');
+});
+
 Route::get('/admins', function () {
     return view('admin.dashboard');
 });
