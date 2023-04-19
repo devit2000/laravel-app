@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Products extends Migration
+class Brand extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,11 @@ class Products extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('brand', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->id('prod_id');
-            $table->string('prod_name', 50);
-            $table->text('prod_des', 500);
-            $table->integer('rate');
-            $table->double('price_in');
-            $table->double('price_out');
-            $table->integer('cate_id');
-            $table->integer('brand_id');
+            $table->id('brand_id');
+            $table->string('brand_name', 50);
+            $table->text('brand_des', 500);
             $table->integer('active');
             $table->integer('ordernum');
             $table->timestamps();
@@ -36,6 +31,6 @@ class Products extends Migration
      */
     public function down()
     {
-        Schema::drop('products');
+        Schema::drop('brand');
     }
 }
