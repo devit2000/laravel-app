@@ -11,7 +11,13 @@ class SlideshowController extends Controller
     public function show(): View
     {
         return view('home', [
-            'slideshow' => Slideshow::all()
+            'slideshow' => Slideshow::where('active', 1)->get()
+        ]);
+    }
+    public function slideshow(): View
+    {
+        return view('admin.slideshow', [
+            'slideshow' => Slideshow::where('active', 1)->get()
         ]);
     }
 }

@@ -23,7 +23,7 @@ class SlideshowFactory extends Factory
             'description' => $this->faker->sentence(5),
             'active' => $this->faker->randomElement([1, 0]),
             'ordernum' => $this->faker->numberBetween(1, 100),
-            'img' => $this->faker->randomElement(['product-1.jpg', 'product-2.jpg', 'product-3.jpg', 'product-4.jpg'])
+            'img' => $this->faker->randomElement(['bg-1.jpg', 'bg-2.jpg', 'bg-3.jpg', 'bg-4.jpg', 'bg-5.jpg'])
         ];
     }
 }

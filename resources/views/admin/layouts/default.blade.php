@@ -3,14 +3,11 @@
 
 <head>
     <title>Admin</title>
-    @include('admin.includes.head');
+    @include('admin.includes.head')
 </head>
 
 <body>
     <div class="container-fluid position-relative d-flex p-0">
-        @include('admin.includes.loading')
-
-
         <!-- Sidebar Start -->
         @include('admin.includes.sidebar')
         <!-- Sidebar End -->
