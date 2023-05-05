@@ -23,4 +23,7 @@ Route::get('/shop', function () {
 Route::get('/admins', function () {
     return view('admin.dashboard');
 });
+Route::get('/admins/login', function () {
+    return view('admin.login');
+});
 Route::get('/admins/slideshow', [SlideshowController::class, 'slideshow']);
